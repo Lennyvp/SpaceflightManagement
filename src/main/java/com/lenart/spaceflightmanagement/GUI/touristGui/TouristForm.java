@@ -48,8 +48,6 @@ public class TouristForm extends FormLayout {
         this.touristService = touristService;
         this.flightService = flightService;
 
-        firstName.setInvalid(true);
-
         gender.setItems(GenderTouristType.values());
         country.setItems(CountryTouristType.values());
 

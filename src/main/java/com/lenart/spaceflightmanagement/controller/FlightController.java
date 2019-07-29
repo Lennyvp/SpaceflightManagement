@@ -36,17 +36,17 @@ public class FlightController {
         flightDao.save(flight);
     }
 
-    @DeleteMapping(value = "/flights/del/{number]")
-    public void deleteFlight(@PathVariable("number") int number){
-        flightDao.deleteById((long) number);
+    @DeleteMapping(value = "/flights/del/{flight_id]")
+    public void deleteFlight(@PathVariable("flight_id") int flight_id){
+        flightDao.deleteById((long) flight_id);
     }
 
     @PutMapping(value = "/flights/{flight_id}/addtourist/{tourist_id}")
-    public void updateTouristaddFlight(@PathVariable("flight_id") int flightId, @PathVariable("tourist_id") int touristId) {
+    public void updateTouristaddFlight(@PathVariable("flight_id") int flight_id, @PathVariable("tourist_id") int tourist_id) {
         List<Flight> flights = flightDao.findAllByCountOfSeatsGreaterThan(1);
         if (flights.size() > 0) {
-            Flight flight = flightDao.findFlightById((long) flightId);
-            Tourist tourist = touristDao.findTouristById((long) touristId);
+            Flight flight = flightDao.findFlightById((long) flight_id);
+            Tourist tourist = touristDao.findTouristById((long) tourist_id);
             flight.addTouristToList(tourist);
             touristDao.save(tourist);
             flightDao.save(flight);
@@ -54,9 +54,9 @@ public class FlightController {
     }
 
     @PutMapping(value = "/flights/{flight_id}/deltourist/{tourist_id}")
-    public void updateTouristdelFlight(@PathVariable("number") int number, @PathVariable("flight_id") int flightId) {
-        Flight flight = flightDao.findFlightById((long) flightId);
-        flight.removeTouristToList(flightId);
+    public void updateTouristdelFlight(@PathVariable("flight_id") int flight_id, @PathVariable("tourist_id") int tourist_id) {
+        Flight flight = flightDao.findFlightById((long) flight_id);
+        flight.removeTouristToList(tourist_id);
         flightDao.save(flight);
     }
 

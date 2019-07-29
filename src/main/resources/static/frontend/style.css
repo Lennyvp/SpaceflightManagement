@@ -7,12 +7,16 @@ body {
     border-color: black;
     border-style: solid;
     border-radius: 1em;
-
     margin-top: 10em;
 }
 
 .innerVerticalLayoutForMenuDivBorder{
     padding: 1em;
+}
+
+.menuButton {
+    width: 15em;
+    height: 3em;
 }
 
 label {

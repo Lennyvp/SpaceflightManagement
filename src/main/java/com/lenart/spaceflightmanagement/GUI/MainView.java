@@ -1,5 +1,7 @@
 package com.lenart.spaceflightmanagement.GUI;
 
+import com.lenart.spaceflightmanagement.GUI.flightGui.FlightGui;
+import com.lenart.spaceflightmanagement.GUI.touristGui.TouristGui;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.html.Div;
@@ -8,6 +10,9 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Arrays;
+import java.util.List;
+
 @Route
 @StyleSheet("style.css")
 public class MainView extends VerticalLayout {
@@ -15,31 +20,27 @@ public class MainView extends VerticalLayout {
     @Autowired
     public MainView() {
 
-        Button buttonToFlight = new Button("Flight Management");
-        Button buttonToTourist = new Button("Tourist Management");
-
-        buttonToFlight.addClickListener( e-> {
-            buttonToFlight.getUI().ifPresent(ui -> ui.navigate("flightgui"));
-        });
-
-        buttonToTourist.addClickListener( e-> {
-            buttonToTourist.getUI().ifPresent(ui -> ui.navigate("touristgui"));
-        });
-
-        setAlignItems(Alignment.CENTER);
+        VerticalLayout menuButtonLayout = generateMenuButtons();
 
         Label labelMenu = new Label("Menu");
         labelMenu.setWidth("200px");
 
-        buttonToFlight.setWidth("200px");
-        buttonToTourist.setWidth("200px");
+        setAlignItems(Alignment.CENTER);
 
-        VerticalLayout innerVerticalLayoutForMenuDivBorder = new VerticalLayout(labelMenu, buttonToFlight, buttonToTourist);
+        VerticalLayout innerVerticalLayoutForMenuDivBorder = new VerticalLayout(labelMenu, menuButtonLayout);
         innerVerticalLayoutForMenuDivBorder.setClassName("innerVerticalLayoutForMenuDivBorder");
 
+        innerVerticalLayoutForMenuDivBorder.setAlignItems(Alignment.CENTER);
         Div menuDivBorder = new Div(innerVerticalLayoutForMenuDivBorder);
         menuDivBorder.setClassName("menuDivBorder");
 
         add(menuDivBorder);
+    }
+
+    private VerticalLayout generateMenuButtons() {
+        return new VerticalLayout(
+                new MenuButton("Flight Management", FlightGui.class),
+                new MenuButton("Tourist Management", TouristGui.class),
+                new MenuButton("Info About API", InfoAboutApiGui.class));
     }
 }
