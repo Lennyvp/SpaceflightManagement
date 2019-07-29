@@ -6,11 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ea5fdb4-c690-44bd-bfcf-f687b9580387" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/spaceflight.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="3ea5fdb4-c690-44bd-bfcf-f687b9580387" name="Default Changelist" comment="" />
     <list id="ae49b108-0b43-4bcc-8bda-dec27a32add0" name="Revert &quot;Second test.&quot;" comment="Revert &quot;Second test.&quot;&#10;&#10;This reverts commit d2c074c3" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -268,7 +264,7 @@
       <workItem from="1564312209594" duration="1092000" />
       <workItem from="1564316100229" duration="688000" />
       <workItem from="1564316871498" duration="14352000" />
-      <workItem from="1564393377618" duration="10636000" />
+      <workItem from="1564393377618" duration="10765000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit.">
       <created>1564395460305</created>
@@ -319,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564399449852</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="5th test.">
+      <created>1564407007588</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1564407007588</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +355,8 @@
     <MESSAGE value="Second test." />
     <MESSAGE value="Third test." />
     <MESSAGE value="Fourth test." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fourth test." />
+    <MESSAGE value="5th test." />
+    <option name="LAST_COMMIT_MESSAGE" value="5th test." />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
