@@ -10,10 +10,3 @@ public class SpaceflightApplication {
         SpringApplication.run(SpaceflightApplication.class, args);
     }
 }
-
-
-/*
-
-
-KOMENATARZ SPAWDZAJACY
- */
