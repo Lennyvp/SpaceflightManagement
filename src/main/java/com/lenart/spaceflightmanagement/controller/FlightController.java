@@ -4,6 +4,8 @@ import com.lenart.spaceflightmanagement.DAO.FlightDao;
 import com.lenart.spaceflightmanagement.DAO.TouristDao;
 import com.lenart.spaceflightmanagement.model.Flight;
 import com.lenart.spaceflightmanagement.model.Tourist;
+import com.lenart.spaceflightmanagement.service.FlightService;
+import com.lenart.spaceflightmanagement.service.TouristService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +17,9 @@ public class FlightController {
 
     private FlightDao flightDao;
     private TouristDao touristDao;
+
+    private TouristService touristService;
+    private FlightService flightService;
 
     @Autowired
     public FlightController(FlightDao flightDao) {
