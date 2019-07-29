@@ -10,7 +10,3 @@ public class SpaceflightApplication {
         SpringApplication.run(SpaceflightApplication.class, args);
     }
 }
-
-/*
-DLACZEGO TEST
- */
