@@ -1,0 +1,45 @@
+Index: src/main/java/com/lenart/spaceflightmanagement/SpaceflightApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/lenart/spaceflightmanagement/SpaceflightApplication.java	(revision e8aaad684d60fec80d272fd0036291863ca7d5ac)
++++ src/main/java/com/lenart/spaceflightmanagement/SpaceflightApplication.java	(revision d2c074c34b26cb5c9f22c7b432feb45527c51fe3)
+@@ -9,8 +9,4 @@
+     public static void main(String[] args) {
+         SpringApplication.run(SpaceflightApplication.class, args);
+     }
+-}
+-
+-/*
+-DLACZEGO TEST
+- */
+\ No newline at end of file
++}
+\ No newline at end of file
+Index: src/main/java/com/lenart/spaceflightmanagement/controller/TouristController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/lenart/spaceflightmanagement/controller/TouristController.java	(revision e8aaad684d60fec80d272fd0036291863ca7d5ac)
++++ src/main/java/com/lenart/spaceflightmanagement/controller/TouristController.java	(revision d2c074c34b26cb5c9f22c7b432feb45527c51fe3)
+@@ -4,6 +4,8 @@
+ import com.lenart.spaceflightmanagement.DAO.TouristDao;
+ import com.lenart.spaceflightmanagement.model.Flight;
+ import com.lenart.spaceflightmanagement.model.Tourist;
++import com.lenart.spaceflightmanagement.service.FlightService;
++import com.lenart.spaceflightmanagement.service.TouristService;
+ import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.http.MediaType;
+ import org.springframework.web.bind.annotation.*;
+@@ -16,6 +18,9 @@
+     private TouristDao touristDao;
+     private FlightDao flightDao;
+ 
++    private TouristService touristService;
++    private FlightService flightService;
++
+     @Autowired
+     public TouristController(TouristDao touristDao, FlightDao flightDao) {
+         this.touristDao = touristDao;
