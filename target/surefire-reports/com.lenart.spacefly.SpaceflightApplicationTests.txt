@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.lenart.spacefly.SpaceflightApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.39 s <<< FAILURE! - in com.lenart.spacefly.SpaceflightApplicationTests
+initializationError(com.lenart.spacefly.SpaceflightApplicationTests)  Time elapsed: 0.008 s  <<< ERROR!
+java.lang.IllegalStateException: Unable to find a @SpringBootConfiguration, you need to use @ContextConfiguration or @SpringBootTest(classes=...) with your test
+

@@ -1,0 +1,20 @@
+body {
+    text-align:center;
+    font-size:16px;
+}
+
+.menuDivBorder {
+    border-color: black;
+    border-style: solid;
+    border-radius: 1em;
+
+    margin-top: 10em;
+}
+
+.innerVerticalLayoutForMenuDivBorder{
+    padding: 1em;
+}
+
+label {
+    font-size: 3em;
+}
