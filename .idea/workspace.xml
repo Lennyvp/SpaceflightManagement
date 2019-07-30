@@ -7,48 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ea5fdb4-c690-44bd-bfcf-f687b9580387" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/spaceflight.trace.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/model/Connector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/model/TouristIdMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/javascriptTestJson.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spaceflight.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/spaceflight.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/DAO/FlightDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/dao/FlightDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/DAO/TouristDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/dao/TouristDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/DataLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/GUI/InfoAboutApiGui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/GUI/MainView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/GUI/MenuButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/GUI/flightGui/FlightForm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/GUI/flightGui/FlightGui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/GUI/touristGui/TouristForm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/GUI/touristGui/TouristGui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/FlightController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/TouristController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/TouristController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/model/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/model/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/model/Tourist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/model/Tourist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/FlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/TouristService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/TouristService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/impl/FlightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/impl/FlightServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/impl/TouristServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/impl/TouristServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/DAO/FlightDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/DAO/FlightDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/DAO/TouristDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/DAO/TouristDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/DataLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/DataLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/GUI/MainView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/GUI/flightGui/FlightForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/GUI/flightGui/FlightGui.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/GUI/touristGui/TouristForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/GUI/touristGui/TouristGui.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/FlightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/FlightController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/TouristController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/TouristController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/model/Flight.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/model/Flight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/model/Tourist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/model/Tourist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/FlightService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/FlightService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/TouristService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/TouristService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/impl/FlightServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/impl/FlightServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/impl/TouristServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/impl/TouristServiceImpl.class" afterDir="false" />
     </list>
     <list id="ae49b108-0b43-4bcc-8bda-dec27a32add0" name="Revert &quot;Second test.&quot;" comment="Revert &quot;Second test.&quot;&#10;&#10;This reverts commit d2c074c3" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -314,7 +273,7 @@
       <workItem from="1564316871498" duration="14352000" />
       <workItem from="1564393377618" duration="25731000" />
       <workItem from="1564432961628" duration="2158000" />
-      <workItem from="1564466704666" duration="38496000" />
+      <workItem from="1564466704666" duration="39257000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit.">
       <created>1564395460305</created>
@@ -386,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564424484290</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="7th big update">
+      <created>1564513876843</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1564513876843</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +389,8 @@
     <MESSAGE value="Fourth test." />
     <MESSAGE value="5th test." />
     <MESSAGE value="6th update" />
-    <option name="LAST_COMMIT_MESSAGE" value="6th update" />
+    <MESSAGE value="7th big update" />
+    <option name="LAST_COMMIT_MESSAGE" value="7th big update" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
