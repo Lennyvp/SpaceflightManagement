@@ -268,7 +268,7 @@
       <workItem from="1564393377618" duration="25731000" />
       <workItem from="1564432961628" duration="2158000" />
       <workItem from="1564466704666" duration="40727000" />
-      <workItem from="1564526144406" duration="1050000" />
+      <workItem from="1564526144406" duration="1715000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit.">
       <created>1564395460305</created>
@@ -361,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564526643295</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="9th return of server gui and @CrossOrigin (CORS) update">
+      <created>1564527231265</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1564527231265</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
