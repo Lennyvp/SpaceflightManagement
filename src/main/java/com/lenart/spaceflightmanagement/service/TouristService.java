@@ -10,7 +10,7 @@ public interface TouristService {
 
     List<Tourist> findAll();
 
-//    List<Tourist> findAllTouristsByName(String name);
+    List<Tourist> findAllTouristsByName(String name);
 
     void save(Tourist tourist);
 

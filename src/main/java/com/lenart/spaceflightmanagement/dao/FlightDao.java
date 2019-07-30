@@ -11,13 +11,13 @@ import java.util.List;
 public interface FlightDao extends CrudRepository<Flight, Long> {
     List<Flight> findAll();
 
-//    List<Flight> findAllByCountOfFreeSeatsGreaterThan(int amount);
-//
-//    List<Flight> findAllByIdLike(Long id);
-//
-//    List<Flight> findAllByArrivalDateOrDepartureDateLike(LocalDateTime arrivalDate, LocalDateTime departureDate);
-//
-//    List<Flight> findAllByCountOfFreeSeatsLikeOrCostOfTicketLike(int seats, double ticketCost);
+    List<Flight> findAllByCountOfFreeSeatsGreaterThan(int amount);
+
+    List<Flight> findAllByIdLike(Long id);
+
+    List<Flight> findAllByArrivalDateOrDepartureDateLike(LocalDateTime arrivalDate, LocalDateTime departureDate);
+
+    List<Flight> findAllByCountOfFreeSeatsLikeOrCostOfTicketLike(int seats, double ticketCost);
 
     Flight findFlightById(Long id);
 }

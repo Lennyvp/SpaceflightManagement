@@ -28,10 +28,10 @@ public class TouristServiceImpl implements TouristService {
         return touristDao.findAll();
     }
 
-//    @Override
-//    public List<Tourist> findAllTouristsByName(String name) {
-//        return touristDao.findAllByFirstNameLikeOrLastNameLike(name, name);
-//    }
+    @Override
+    public List<Tourist> findAllTouristsByName(String name) {
+        return touristDao.findAllByFirstNameLikeOrLastNameLike(name, name);
+    }
 
     @Override
     public void save(Tourist tourist) {

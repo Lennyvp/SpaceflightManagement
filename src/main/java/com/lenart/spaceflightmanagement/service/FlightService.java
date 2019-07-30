@@ -10,13 +10,13 @@ public interface FlightService {
 
     List<Flight> findAll();
 
-//    List<Flight> findAllByIdLike(Long id);
-//
-//    List<Flight> findAllByDateLike(LocalDateTime date);
-//
-//    List<Flight> findAllByIntLike(int number);
-//
-//    List<Flight> findAllByCountOfSeatsGreaterThan(int amount);
+    List<Flight> findAllByIdLike(Long id);
+
+    List<Flight> findAllByDateLike(LocalDateTime date);
+
+    List<Flight> findAllByIntLike(int number);
+
+    List<Flight> findAllByCountOfFreeSeatsGreaterThan(int amount);
 
     void save(Flight flight);
 

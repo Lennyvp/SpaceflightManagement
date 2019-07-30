@@ -29,25 +29,25 @@ public class FlightServiceImpl implements FlightService {
         return flightDao.findAll();
     }
 
-//    @Override
-//    public List<Flight> findAllByIdLike(Long id) {
-//        return flightDao.findAllByIdLike(id);
-//    }
-//
-//    @Override
-//    public List<Flight> findAllByDateLike(LocalDateTime date) {
-//        return flightDao.findAllByArrivalDateOrDepartureDateLike(date, date);
-//    }
-//
-//    @Override
-//    public List<Flight> findAllByIntLike(int number) {
-//        return flightDao.findAllByCountOfSeatsLikeOrCostOfTicketLike(number, number);
-//    }
-//
-//    @Override
-//    public List<Flight> findAllByCountOfSeatsGreaterThan(int amount) {
-//        return flightDao.findAllByCountOfSeatsGreaterThan(amount);
-//    }
+    @Override
+    public List<Flight> findAllByIdLike(Long id) {
+        return flightDao.findAllByIdLike(id);
+    }
+
+    @Override
+    public List<Flight> findAllByDateLike(LocalDateTime date) {
+        return flightDao.findAllByArrivalDateOrDepartureDateLike(date, date);
+    }
+
+    @Override
+    public List<Flight> findAllByIntLike(int number) {
+        return flightDao.findAllByCountOfFreeSeatsLikeOrCostOfTicketLike(number, number);
+    }
+
+    @Override
+    public List<Flight> findAllByCountOfFreeSeatsGreaterThan(int amount) {
+        return flightDao.findAllByCountOfFreeSeatsGreaterThan(amount);
+    }
 
     @Override
     public void save(Flight flight) {
