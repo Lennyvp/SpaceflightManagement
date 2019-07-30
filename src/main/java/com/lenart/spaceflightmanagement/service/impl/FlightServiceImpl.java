@@ -1,6 +1,6 @@
 package com.lenart.spaceflightmanagement.service.impl;
 
-import com.lenart.spaceflightmanagement.DAO.FlightDao;
+import com.lenart.spaceflightmanagement.dao.FlightDao;
 import com.lenart.spaceflightmanagement.model.Flight;
 import com.lenart.spaceflightmanagement.service.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,29 +25,29 @@ public class FlightServiceImpl implements FlightService {
     }
 
     @Override
-    public List<Flight> findAllFlights() {
+    public List<Flight> findAll() {
         return flightDao.findAll();
     }
 
-    @Override
-    public List<Flight> findAllByIdLike(Long id) {
-        return flightDao.findAllByIdLike(id);
-    }
-
-    @Override
-    public List<Flight> findAllByDateLike(LocalDateTime date) {
-        return flightDao.findAllByArrivalDateOrDepartureDateLike(date, date);
-    }
-
-    @Override
-    public List<Flight> findAllByIntLike(int number) {
-        return flightDao.findAllByCountOfSeatsLikeOrCostOfTicketLike(number, number);
-    }
-
-    @Override
-    public List<Flight> findAllByCountOfSeatsGreaterThan(int amount) {
-        return flightDao.findAllByCountOfSeatsGreaterThan(amount);
-    }
+//    @Override
+//    public List<Flight> findAllByIdLike(Long id) {
+//        return flightDao.findAllByIdLike(id);
+//    }
+//
+//    @Override
+//    public List<Flight> findAllByDateLike(LocalDateTime date) {
+//        return flightDao.findAllByArrivalDateOrDepartureDateLike(date, date);
+//    }
+//
+//    @Override
+//    public List<Flight> findAllByIntLike(int number) {
+//        return flightDao.findAllByCountOfSeatsLikeOrCostOfTicketLike(number, number);
+//    }
+//
+//    @Override
+//    public List<Flight> findAllByCountOfSeatsGreaterThan(int amount) {
+//        return flightDao.findAllByCountOfSeatsGreaterThan(amount);
+//    }
 
     @Override
     public void save(Flight flight) {
@@ -57,5 +57,10 @@ public class FlightServiceImpl implements FlightService {
     @Override
     public void delete(Flight flight) {
         flightDao.delete(flight);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        flightDao.deleteById(id);
     }
 }

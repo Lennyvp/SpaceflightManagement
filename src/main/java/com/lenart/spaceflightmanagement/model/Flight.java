@@ -8,6 +8,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.HashSet;
+import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
 
 @Entity
@@ -22,14 +24,20 @@ public class Flight {
     @NotNull
     private LocalDateTime arrivalDate = LocalDateTime.now();
     @NotNull
-    private int countOfSeats;
+    private int countOfFreeSeats;
+    //    @NotNull
+//    private int countOfAllSeats;
     @NotNull
     private double costOfTicket;
 
-    @JsonIgnore
-    @ManyToMany
+////    @OneToOne
+//    @OneToOne(mappedBy = "flight" , cascade = CascadeType.ALL)
+////    @OneToMany(targetEntity=TouristIdMap.class, mappedBy="flight", fetch=FetchType.EAGER)
+//    private TouristIdMap touristIdMap;
+
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinColumn(name = "tourist_id")
-    private Set<Tourist> touristList;
+    private Set<Tourist> touristSet;
 
     public Flight() {
     }
@@ -37,9 +45,11 @@ public class Flight {
     public Flight(LocalDateTime departureDate, LocalDateTime arrivalDate, int countOfSeats, double costOfTicket) {
         this.departureDate = departureDate;
         this.arrivalDate = arrivalDate;
-        this.countOfSeats = countOfSeats;
         this.costOfTicket = costOfTicket;
-        this.touristList = new HashSet<>();
+        this.touristSet = new HashSet<>();
+//        this.countOfAllSeats = countOfSeats;
+        this.countOfFreeSeats = countOfSeats - touristSet.size();
+//        this.touristIdMap = new TouristIdMap(this, touristList);
     }
 
     public Long getId() {
@@ -66,28 +76,94 @@ public class Flight {
         this.arrivalDate = arrivalDate;
     }
 
-    public int getCountOfSeats() {
-        return countOfSeats;
+    /*
+    START OF SEAT LOGIC
+     */
+
+    public int getCountOfFreeSeats() {
+        return countOfFreeSeats;
     }
 
-    public void setCountOfSeats(int countOfSeats) {
-        this.countOfSeats = countOfSeats;
+    public void setCountOfFreeSeats(int countOfFreeSeats) {
+        this.countOfFreeSeats = countOfFreeSeats;
     }
 
-    public void setTouristList(Set<Tourist> touristList) {
-        this.touristList = touristList;
+    //    public int getCountOfAllSeats() {
+//        return countOfAllSeats;
+//    }
+
+//    public void setCountOfAllSeats(int countOfAllSeats) {
+//        this.countOfAllSeats = countOfAllSeats;
+//    }
+
+    public void reserveSeatAfterAddingTourist() {
+        countOfFreeSeats -= 1;
     }
 
-    public Set<Tourist> getTouristList() {
-        return touristList;
+    public void returnSeatAfterRemovingTourist() {
+        countOfFreeSeats += 1;
+    }
+
+     /*
+    START OF TOURIST LOGIC
+     */
+
+    public void setTouristSet(Set<Tourist> touristSet) {
+        this.touristSet = touristSet;
+//        this.touristIdMap.setValues(touristList);
+    }
+
+    public Set<Tourist> getTouristSet() {
+        return touristSet;
+    }
+
+//    @JsonIgnore
+//    private boolean isEnoughSeats() {
+//        return countOfFreeSeats > 0 && countOfFreeSeats <= countOfAllSeats;
+//    }
+
+    @JsonIgnore
+    private boolean isEnoughSeats() {
+        return countOfFreeSeats > 0;
     }
 
     public void addTouristToList(Tourist tourist) {
-        touristList.add(tourist);
+        if (isEnoughSeats()) {
+            boolean condition = false;
+            for (Tourist t : touristSet) {
+//                touristSet.stream().filter(t->!t.equals(tourist)).forEach( t->reserveSeatAfterAddingTourist());
+                if(tourist.equals(t)){
+                    condition = true;
+                    break;
+                }
+            }
+            if(!condition){
+                touristSet.add(tourist);
+                reserveSeatAfterAddingTourist();
+            }
+
+
+//            touristSet.forEach(t -> {
+//                if(!t.equals(tourist)){
+//                    reserveSeatAfterAddingTourist();
+//                }
+//            });
+//            touristSet.add(tourist);
+//            touristSet.stream().filter(t->!t.equals(tourist)).forEach( t->reserveSeatAfterAddingTourist());
+//            reserveSeatAfterAddingTourist();
+            //        touristIdMap.addValue(tourist.getId());
+        }
     }
 
-    public void removeTouristToList(Integer id) {
-        touristList.remove(id);
+    public void removeTouristFromList(Integer id) {
+        if (isEnoughSeats()) {
+            Optional<Tourist> searchedTourist = touristSet.stream()
+                    .filter(tourist -> tourist.getId().equals(id.longValue())).findFirst();
+            searchedTourist.ifPresent(flight -> touristSet.remove(flight));
+
+            returnSeatAfterRemovingTourist();
+//        touristIdMap.removeValue((long) id);
+        }
     }
 
     public double getCostOfTicket() {
@@ -98,42 +174,69 @@ public class Flight {
         this.costOfTicket = costOfTicket;
     }
 
+//    /*
+//    Start of Tourist ID Map
+//     */
+//
+//    public Set<Long> getValuesFromTouristIdMap(){
+//        return touristIdMap.getTouristIdSet();
+//    }
+//
+//    @JsonIgnore
+//    public TouristIdMap getTouristIdMap() {
+//        return touristIdMap;
+//    }
+//
+//    @JsonIgnore
+//    public void setTouristIdMap(TouristIdMap touristIdMap) {
+//        this.touristIdMap = touristIdMap;
+//    }
+//
+//    /*
+//    End of Tourist ID Map
+//     */
+
+    /*
+    FOR GUI
+     */
     @JsonIgnore
-    public LocalDate getArrivalDateWithoutTime(){
+    public LocalDate getArrivalDateWithoutTime() {
         return arrivalDate.toLocalDate();
     }
+
     @JsonIgnore
-    public void setArrivalDateWithoutTime(LocalDate arrivalDate){
+    public void setArrivalDateWithoutTime(LocalDate arrivalDate) {
         this.arrivalDate = LocalDateTime.of(arrivalDate, getArrivalTime());
     }
+
     @JsonIgnore
-    public LocalTime getArrivalTime(){
+    public LocalTime getArrivalTime() {
         return arrivalDate.toLocalTime();
     }
 
     @JsonIgnore
-    public void setArrivalTime(LocalTime arrivalTime){
-        this.arrivalDate = LocalDateTime.of(getArrivalDateWithoutTime(),arrivalTime);
+    public void setArrivalTime(LocalTime arrivalTime) {
+        this.arrivalDate = LocalDateTime.of(getArrivalDateWithoutTime(), arrivalTime);
     }
 
     @JsonIgnore
-    public LocalDate getDepartureDateWithoutTime(){
+    public LocalDate getDepartureDateWithoutTime() {
         return departureDate.toLocalDate();
     }
 
     @JsonIgnore
-    public void setDepartureDateWithoutTime(LocalDate departureDate){
+    public void setDepartureDateWithoutTime(LocalDate departureDate) {
         this.departureDate = LocalDateTime.of(departureDate, getDepartureTime());
     }
 
     @JsonIgnore
-    public LocalTime getDepartureTime(){
+    public LocalTime getDepartureTime() {
         return departureDate.toLocalTime();
     }
 
     @JsonIgnore
-    public void setDepartureTime(LocalTime departureTime){
-        this.departureDate = LocalDateTime.of(getDepartureDateWithoutTime(),departureTime);
+    public void setDepartureTime(LocalTime departureTime) {
+        this.departureDate = LocalDateTime.of(getDepartureDateWithoutTime(), departureTime);
     }
 
     @Override
@@ -142,9 +245,25 @@ public class Flight {
                 "id=" + id +
                 ", departureDate=" + departureDate +
                 ", arrivalDate=" + arrivalDate +
-                ", countOfSeats=" + countOfSeats +
+                ", countOfSeats=" + countOfFreeSeats +
                 ", costOfTicket=" + costOfTicket +
-                ", touristList=" + touristList +
+                ", touristList=" + touristSet +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Flight flight = (Flight) o;
+        return countOfFreeSeats == flight.countOfFreeSeats &&
+                Double.compare(flight.costOfTicket, costOfTicket) == 0 &&
+                Objects.equals(departureDate, flight.departureDate) &&
+                Objects.equals(arrivalDate, flight.arrivalDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(departureDate, arrivalDate, countOfFreeSeats, costOfTicket);
     }
 }

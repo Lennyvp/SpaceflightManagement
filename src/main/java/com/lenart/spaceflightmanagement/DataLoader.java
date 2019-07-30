@@ -1,11 +1,13 @@
 package com.lenart.spaceflightmanagement;
 
-import com.lenart.spaceflightmanagement.DAO.FlightDao;
-import com.lenart.spaceflightmanagement.DAO.TouristDao;
+import com.lenart.spaceflightmanagement.dao.FlightDao;
+import com.lenart.spaceflightmanagement.dao.TouristDao;
 import com.lenart.spaceflightmanagement.model.Flight;
 import com.lenart.spaceflightmanagement.model.Tourist;
 import com.lenart.spaceflightmanagement.model.typeTourist.CountryTouristType;
 import com.lenart.spaceflightmanagement.model.typeTourist.GenderTouristType;
+import com.lenart.spaceflightmanagement.service.FlightService;
+import com.lenart.spaceflightmanagement.service.TouristService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -17,13 +19,13 @@ import java.time.LocalDateTime;
 @Component
 public class DataLoader implements ApplicationRunner {
 
-    private FlightDao flightDAO;
-    private TouristDao touristDAO;
+    private FlightService flightService;
+    private TouristService touristService;
 
     @Autowired
-    public DataLoader(FlightDao flightDAO, TouristDao touristDAO) {
-        this.flightDAO = flightDAO;
-        this.touristDAO = touristDAO;
+    public DataLoader(FlightService flightService, TouristService touristService) {
+        this.flightService = flightService;
+        this.touristService = touristService;
     }
 
     @Override
@@ -38,23 +40,21 @@ public class DataLoader implements ApplicationRunner {
 
 
         Flight flight1 = new Flight(LocalDateTime.of(2018,11,11,12,23),
-                LocalDateTime.of(2018,12,12,13,23),
-                100,22.0);
+                LocalDateTime.of(2018,12,12,13,23), 5,22.0);
         Flight flight2 = new Flight(LocalDateTime.of(2017,11,11,12,23),
-                LocalDateTime.of(2018,12,12,13,23),
-                150,23.0);
+                LocalDateTime.of(2018,12,12,13,23), 10,23.0);
 
         Flight flight3 = new Flight(LocalDateTime.of(2218,3,4,5,6),
-                LocalDateTime.of(1992,2,22,3,6),
-                100,123.0);
+                LocalDateTime.of(1992,2,22,3,6), 10,123.0);
         Flight flight4 = new Flight(LocalDateTime.of(2112,1,11,13,57),
-                LocalDateTime.of(1410,9,12,14,12),
-                1250,223.0);
+                LocalDateTime.of(1410,9,12,14,12), 20,223.0);
 
-        flightDAO.save(flight1);
-        flightDAO.save(flight2);
+//        TouristIdMap touristIdMap = new
 
-        touristDAO.save(tourist1);
+        flightService.save(flight1);
+        flightService.save(flight2);
+
+        touristService.save(tourist1);
 
         flight1.addTouristToList(tourist1);
         flight2.addTouristToList(tourist1);
@@ -62,14 +62,14 @@ public class DataLoader implements ApplicationRunner {
         tourist1.addFlightToList(flight1);
         tourist1.addFlightToList(flight2);
 
-        flightDAO.save(flight1);
-        flightDAO.save(flight2);
-        touristDAO.save(tourist1);
+        flightService.save(flight1);
+        flightService.save(flight2);
+        touristService.save(tourist1);
 
-        touristDAO.save(tourist2);
-        touristDAO.save(tourist3);
+        touristService.save(tourist2);
+        touristService.save(tourist3);
 
-        flightDAO.save(flight3);
-        flightDAO.save(flight4);
+        flightService.save(flight3);
+        flightService.save(flight4);
     }
 }

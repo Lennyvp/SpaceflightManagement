@@ -1,4 +1,4 @@
-package com.lenart.spaceflightmanagement.DAO;
+package com.lenart.spaceflightmanagement.dao;
 
 import com.lenart.spaceflightmanagement.model.Tourist;
 import org.springframework.data.repository.CrudRepository;

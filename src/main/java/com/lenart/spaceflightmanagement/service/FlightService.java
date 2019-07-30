@@ -8,17 +8,19 @@ import java.util.List;
 public interface FlightService {
     Flight findFlightById(Long id);
 
-    List<Flight> findAllFlights();
+    List<Flight> findAll();
 
-    List<Flight> findAllByIdLike(Long id);
-
-    List<Flight> findAllByDateLike(LocalDateTime date);
-
-    List<Flight> findAllByIntLike(int number);
-
-    List<Flight> findAllByCountOfSeatsGreaterThan(int amount);
+//    List<Flight> findAllByIdLike(Long id);
+//
+//    List<Flight> findAllByDateLike(LocalDateTime date);
+//
+//    List<Flight> findAllByIntLike(int number);
+//
+//    List<Flight> findAllByCountOfSeatsGreaterThan(int amount);
 
     void save(Flight flight);
 
     void delete(Flight flight);
+
+    void deleteById(Long id);
 }

@@ -1,5 +1,6 @@
 package com.lenart.spaceflightmanagement.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.lenart.spaceflightmanagement.model.typeTourist.CountryTouristType;
 import com.lenart.spaceflightmanagement.model.typeTourist.GenderTouristType;
 
@@ -8,6 +9,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.util.HashSet;
+import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
 
 @Entity
@@ -29,9 +32,10 @@ public class Tourist {
     @NotNull
     private LocalDate dateOfBirth;
 
-    @ManyToMany
+    @JsonIgnore
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinColumn(name = "flight_id")
-    private Set<Flight> flightList;
+    private Set<Flight> flightSet;
 
     public Tourist() {
     }
@@ -43,7 +47,8 @@ public class Tourist {
         this.country = country;
         this.notes = notes;
         this.dateOfBirth = dateOfBirth;
-        this.flightList = new HashSet<>();
+        this.flightSet = new HashSet<>();
+//        flightSet.forEach(Flight::reserveSeatAfterAddingTourist);
     }
 
     public Long getId() {
@@ -102,20 +107,48 @@ public class Tourist {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public Set<Flight> getFlightList() {
-        return flightList;
+    public Set<Flight> getFlightSet() {
+        return flightSet;
     }
 
-    public void setFlightList(Set<Flight> flightList) {
-        this.flightList = flightList;
+    public void setFlightSet(Set<Flight> flightSet) {
+        this.flightSet = flightSet;
     }
 
-    public void addFlightToList(Flight flight){
-        flightList.add(flight);
+//    private boolean isEnoughSeats(Flight flight) {
+//        return flight.getCountOfFreeSeats() > 0 && flight.getCountOfFreeSeats() <= flight.getCountOfAllSeats();
+//    }
+
+    private boolean isEnoughSeats(Flight flight) {
+        return flight.getCountOfFreeSeats() > 0;
     }
 
-    public void removeFlightToList(Integer id){
-        flightList.remove(id);
+    public void addFlightToList(Flight flight) {
+        if (isEnoughSeats(flight)) {
+            flightSet.add(flight);
+//            flight.reserveSeatAfterAddingTourist();
+        }
+    }
+
+    private Optional<Flight> getOptionalFlight() {
+        return flightSet.stream()
+                .filter(flight -> flight.getId().equals(id.longValue()))
+                .findFirst();
+    }
+
+//    private void returnSeatAfterRemovingFlight() {
+//        flightSet.stream()
+//                .filter(flight -> flight.getId().equals(id.longValue()))
+//                .filter(this::isEnoughSeats)
+//                .forEach(Flight::returnSeatAfterRemovingTourist);
+//    }
+
+    public void removeFlightToList(Integer id) {
+        Optional<Flight> searchedFlight = getOptionalFlight();
+        searchedFlight
+                .filter(this::isEnoughSeats)
+                .ifPresent(flight -> flightSet.remove(flight));
+//        returnSeatAfterRemovingFlight();
     }
 
     @Override
@@ -128,7 +161,25 @@ public class Tourist {
                 ", country='" + country + '\'' +
                 ", notes='" + notes + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
-                ", flightList=" + flightList +
+                ", flightList=" + flightSet +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Tourist tourist = (Tourist) o;
+        return Objects.equals(firstName, tourist.firstName) &&
+                Objects.equals(lastName, tourist.lastName) &&
+                gender == tourist.gender &&
+                country == tourist.country &&
+                Objects.equals(notes, tourist.notes) &&
+                Objects.equals(dateOfBirth, tourist.dateOfBirth);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, gender, country, notes, dateOfBirth);
     }
 }

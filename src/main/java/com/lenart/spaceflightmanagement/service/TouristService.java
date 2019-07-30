@@ -8,11 +8,13 @@ public interface TouristService {
 
     Tourist findTouristById(Long id);
 
-    List<Tourist> findAllTourists();
+    List<Tourist> findAll();
 
-    List<Tourist> findAllTouristsByName(String name);
+//    List<Tourist> findAllTouristsByName(String name);
 
     void save(Tourist tourist);
 
     void delete(Tourist tourist);
+
+    void deleteById(Long id);
 }
