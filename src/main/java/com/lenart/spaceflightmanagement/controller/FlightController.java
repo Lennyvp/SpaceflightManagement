@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin
 @RestController
+@CrossOrigin
 public class FlightController {
 
     private TouristService touristService;
@@ -30,7 +30,7 @@ public class FlightController {
 
     @PostMapping(value = "/api/flights/add", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void addFlight(@RequestBody Flight flight) {
-        flight.getTouristSet().clear();
+//        flight.getTouristSet().clear();
         flightService.save(flight);
     }
 
