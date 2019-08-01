@@ -1,6 +1,6 @@
 package com.lenart.spaceflightmanagement.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -25,18 +25,12 @@ public class Flight {
     private LocalDateTime arrivalDate = LocalDateTime.now();
     @NotNull
     private int countOfFreeSeats;
-    //    @NotNull
-//    private int countOfAllSeats;
+
     @NotNull
     private double costOfTicket;
 
-////    @OneToOne
-//    @OneToOne(mappedBy = "flight" , cascade = CascadeType.ALL)
-////    @OneToMany(targetEntity=TouristIdMap.class, mappedBy="flight", fetch=FetchType.EAGER)
-//    private TouristIdMap touristIdMap;
-
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinColumn(name = "tourist_id")
+    @JsonIgnoreProperties("flightSet")
     private Set<Tourist> touristSet;
 
     public Flight() {

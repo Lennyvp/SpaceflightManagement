@@ -1,6 +1,6 @@
 package com.lenart.spaceflightmanagement.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.*;
 import com.lenart.spaceflightmanagement.model.typeTourist.CountryTouristType;
 import com.lenart.spaceflightmanagement.model.typeTourist.GenderTouristType;
 
@@ -32,9 +32,8 @@ public class Tourist {
     @NotNull
     private LocalDate dateOfBirth;
 
-    @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinColumn(name = "flight_id")
+    @JsonIgnoreProperties("touristSet")
     private Set<Flight> flightSet;
 
     public Tourist() {
