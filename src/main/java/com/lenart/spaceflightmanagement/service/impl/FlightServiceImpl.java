@@ -63,4 +63,17 @@ public class FlightServiceImpl implements FlightService {
     public void deleteById(Long id) {
         flightDao.deleteById(id);
     }
+
+    @Override
+    public void updateFlightById(Long id, Flight updatedFlight) {
+        Flight flight = flightDao.findFlightById(id);
+
+        flight.setId(id);
+        flight.setDepartureDate( updatedFlight.getDepartureDate());
+        flight.setArrivalDate( updatedFlight.getArrivalDate());
+        flight.setCountOfFreeSeats( updatedFlight.getCountOfFreeSeats());
+        flight.setCostOfTicket( updatedFlight.getCostOfTicket());
+
+        flightDao.save(flight);
+    }
 }

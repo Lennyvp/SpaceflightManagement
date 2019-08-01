@@ -1,5 +1,6 @@
 package com.lenart.spaceflightmanagement.service;
 
+import com.lenart.spaceflightmanagement.model.Flight;
 import com.lenart.spaceflightmanagement.model.Tourist;
 
 import java.util.List;
@@ -17,4 +18,6 @@ public interface TouristService {
     void delete(Tourist tourist);
 
     void deleteById(Long id);
+
+    void updateTouristById(Long id, Tourist updatedTourist);
 }

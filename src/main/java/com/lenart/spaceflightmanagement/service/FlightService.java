@@ -23,4 +23,6 @@ public interface FlightService {
     void delete(Flight flight);
 
     void deleteById(Long id);
+
+    void updateFlightById(Long id, Flight updatedFlight);
 }

@@ -47,4 +47,20 @@ public class TouristServiceImpl implements TouristService {
     public void deleteById(Long id) {
         touristDao.deleteById(id);
     }
+
+    @Override
+    public void updateTouristById(Long id, Tourist updatedTourist) {
+        Tourist tourist = touristDao.findTouristById(id);
+
+        tourist.setId(id);
+        tourist.setFirstName(updatedTourist.getFirstName());
+        tourist.setLastName(updatedTourist.getLastName());
+        tourist.setGender(updatedTourist.getGender());
+        tourist.setNotes(updatedTourist.getNotes());
+        tourist.setDateOfBirth(updatedTourist.getDateOfBirth());
+
+        touristDao.save(tourist);
+    }
+
+
 }

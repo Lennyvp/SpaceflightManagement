@@ -35,10 +35,9 @@ public class FlightController {
         flightService.save(flight);
     }
 
-    @PutMapping(value = "/api/flights/{flight_id}")
-    public void updateFlight(@PathVariable("flight_id") int flight_id) {
-        Flight flight = flightService.findFlightById((long) flight_id);
-        flightService.save(flight);
+    @PutMapping(value = "/api/flights/{flight_id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public void updateFlight(@PathVariable("flight_id") int flight_id, @RequestBody Flight updatedFlight) {
+        flightService.updateFlightById((long) flight_id, updatedFlight);
     }
 
     @DeleteMapping(value = "/api/flights/{flight_id}")
@@ -46,7 +45,7 @@ public class FlightController {
         flightService.deleteById((long) flight_id);
     }
 
-    @PutMapping(value = "/api/flights/{flight_id}/addtourist/{tourist_id}")
+    @PutMapping(value = "/api/flights/{flight_id}/addtourist/{tourist_id}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void updateTouristAddFlight(@PathVariable("flight_id") int flight_id, @PathVariable("tourist_id") int tourist_id) {
         Flight flight = flightService.findFlightById((long) flight_id);
         Tourist tourist = touristService.findTouristById((long) tourist_id);
@@ -55,7 +54,7 @@ public class FlightController {
         flightService.save(flight);
     }
 
-    @PutMapping(value = "/api/flights/{flight_id}/deltourist/{tourist_id}")
+    @PutMapping(value = "/api/flights/{flight_id}/deltourist/{tourist_id}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void updateTouristDelFlight(@PathVariable("flight_id") int flight_id, @PathVariable("tourist_id") int tourist_id) {
         Flight flight = flightService.findFlightById((long) flight_id);
         flight.removeTouristFromList(tourist_id);

@@ -10,9 +10,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/FlightController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/TouristController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/TouristController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/gui/InfoAboutApiGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/gui/InfoAboutApiGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/FlightService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/TouristService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/TouristService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/impl/FlightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/impl/FlightServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/impl/TouristServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/impl/TouristServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/FlightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/FlightController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/TouristController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/TouristController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/gui/InfoAboutApiGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/gui/InfoAboutApiGui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/TouristService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/TouristService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/impl/TouristServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/impl/TouristServiceImpl.class" afterDir="false" />
     </list>
     <list id="ae49b108-0b43-4bcc-8bda-dec27a32add0" name="Revert &quot;Second test.&quot;" comment="Revert &quot;Second test.&quot;&#10;&#10;This reverts commit d2c074c3" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -257,7 +263,7 @@
       <workItem from="1564526144406" duration="2711000" />
       <workItem from="1564558481010" duration="2370000" />
       <workItem from="1564603332351" duration="7915000" />
-      <workItem from="1564643066884" duration="3083000" />
+      <workItem from="1564643066884" duration="7564000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit.">
       <created>1564395460305</created>
@@ -392,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564644034680</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="14th update: Changed endpoints (add @PutMapping for Tourist&amp;Flight)">
+      <created>1564651676593</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1564651676593</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +455,8 @@
     <MESSAGE value="11th update" />
     <MESSAGE value="12th update" />
     <MESSAGE value="13th update: Changed endpoints (remove /add from @PostMapping)" />
-    <option name="LAST_COMMIT_MESSAGE" value="13th update: Changed endpoints (remove /add from @PostMapping)" />
+    <MESSAGE value="14th update: Changed endpoints (add @PutMapping for Tourist&amp;Flight)" />
+    <option name="LAST_COMMIT_MESSAGE" value="14th update: Changed endpoints (add @PutMapping for Tourist&amp;Flight)" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
