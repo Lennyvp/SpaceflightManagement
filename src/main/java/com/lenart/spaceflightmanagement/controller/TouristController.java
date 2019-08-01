@@ -28,7 +28,8 @@ public class TouristController {
         return touristService.findAll();
     }
 
-    @PostMapping(value = "/api/tourists/add", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/api/tourists", consumes = MediaType.APPLICATION_JSON_VALUE)
+//    @PostMapping(value = "/api/tourists/add", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void addTourist(@RequestBody Tourist tourist) {
 //        tourist.getFlightSet().clear(); //cannot add list of flight in JSON
         touristService.save(tourist);

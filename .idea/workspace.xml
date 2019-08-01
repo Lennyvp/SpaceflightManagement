@@ -6,7 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ea5fdb4-c690-44bd-bfcf-f687b9580387" name="Default Changelist" comment="" />
+    <list default="true" id="3ea5fdb4-c690-44bd-bfcf-f687b9580387" name="Default Changelist" comment="12th update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <list id="ae49b108-0b43-4bcc-8bda-dec27a32add0" name="Revert &quot;Second test.&quot;" comment="Revert &quot;Second test.&quot;&#10;&#10;This reverts commit d2c074c3" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -220,31 +222,6 @@
         </treeState>
       </serviceView>
     </option>
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-          <option name="viewType" value="service" />
-          <option name="roots">
-            <list>
-              <ServiceState>
-                <option name="path">
-                  <list>
-                    <option value="Run Dashboard" />
-                    <option value="SpringBootApplicationConfigurationType" />
-                    <option value="SpringBootApplicationConfigurationType/SpaceflightApplication" />
-                  </list>
-                </option>
-                <option name="contributor" value="com.intellij.execution.dashboard.RunConfigurationsServiceViewContributor" />
-              </ServiceState>
-            </list>
-          </option>
-        </serviceView>
-      </list>
-    </option>
     <option name="selectedView" value="0" />
   </component>
   <component name="SvnConfiguration">
@@ -270,7 +247,8 @@
       <workItem from="1564466704666" duration="40727000" />
       <workItem from="1564526144406" duration="2711000" />
       <workItem from="1564558481010" duration="2370000" />
-      <workItem from="1564603332351" duration="4231000" />
+      <workItem from="1564603332351" duration="7915000" />
+      <workItem from="1564643066884" duration="597000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit.">
       <created>1564395460305</created>
@@ -391,13 +369,21 @@
       <option name="project" value="LOCAL" />
       <updated>1564611375693</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="12th update">
+      <created>1564611687264</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1564611687264</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.History.Properties">
+    <option name="SHOW_OTHER_BRANCHES" value="true" />
     <option name="COLUMN_ORDER">
       <list>
         <option value="0" />
@@ -410,6 +396,11 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>

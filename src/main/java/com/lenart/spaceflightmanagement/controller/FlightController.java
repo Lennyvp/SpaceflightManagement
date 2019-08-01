@@ -28,7 +28,8 @@ public class FlightController {
         return flightService.findAll();
     }
 
-    @PostMapping(value = "/api/flights/add", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/api/flights", consumes = MediaType.APPLICATION_JSON_VALUE)
+//    @PostMapping(value = "/api/flights/add", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void addFlight(@RequestBody Flight flight) {
 //        flight.getTouristSet().clear();
         flightService.save(flight);
