@@ -28,14 +28,20 @@ public class TouristController {
         return touristService.findAll();
     }
 
-    @PostMapping(value = "/api/tourists", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/api/tourists/", consumes = MediaType.APPLICATION_JSON_VALUE)
 //    @PostMapping(value = "/api/tourists/add", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void addTourist(@RequestBody Tourist tourist) {
 //        tourist.getFlightSet().clear(); //cannot add list of flight in JSON
         touristService.save(tourist);
     }
 
-    @DeleteMapping(value = "/api/tourists/del/{tourist_id}]")
+    @PutMapping(value = "/api/tourists/{tourist_id}]")
+    public void updateTourist(@PathVariable("tourist_id") int tourist_id) {
+        Tourist tourist = touristService.findTouristById((long) tourist_id);
+        touristService.save(tourist);
+    }
+
+    @DeleteMapping(value = "/api/tourists/{tourist_id}]")
     public void deleteTourist(@PathVariable("tourist_id") int tourist_id) {
         touristService.deleteById((long) tourist_id);
     }

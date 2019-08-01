@@ -35,7 +35,13 @@ public class FlightController {
         flightService.save(flight);
     }
 
-    @DeleteMapping(value = "/api/flights/del/{flight_id]")
+    @PutMapping(value = "/api/flights/{flight_id}")
+    public void updateFlight(@PathVariable("flight_id") int flight_id) {
+        Flight flight = flightService.findFlightById((long) flight_id);
+        flightService.save(flight);
+    }
+
+    @DeleteMapping(value = "/api/flights/{flight_id}")
     public void deleteFlight(@PathVariable("flight_id") int flight_id) {
         flightService.deleteById((long) flight_id);
     }

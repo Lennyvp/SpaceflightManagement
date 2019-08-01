@@ -6,8 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ea5fdb4-c690-44bd-bfcf-f687b9580387" name="Default Changelist" comment="12th update">
+    <list default="true" id="3ea5fdb4-c690-44bd-bfcf-f687b9580387" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/FlightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/TouristController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/TouristController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/gui/InfoAboutApiGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/gui/InfoAboutApiGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/FlightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/FlightController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/TouristController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/TouristController.class" afterDir="false" />
     </list>
     <list id="ae49b108-0b43-4bcc-8bda-dec27a32add0" name="Revert &quot;Second test.&quot;" comment="Revert &quot;Second test.&quot;&#10;&#10;This reverts commit d2c074c3" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -217,12 +222,16 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4cc21a68" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
     </option>
-    <option name="selectedView" value="0" />
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\Lenny\AppData\Roaming\Subversion</configuration>
@@ -248,7 +257,7 @@
       <workItem from="1564526144406" duration="2711000" />
       <workItem from="1564558481010" duration="2370000" />
       <workItem from="1564603332351" duration="7915000" />
-      <workItem from="1564643066884" duration="597000" />
+      <workItem from="1564643066884" duration="3083000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit.">
       <created>1564395460305</created>
@@ -376,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564611687264</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="13th update: Changed endpoints (remove /add from @PostMapping)">
+      <created>1564644034680</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1564644034680</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +441,8 @@
     <MESSAGE value="10th update" />
     <MESSAGE value="11th update" />
     <MESSAGE value="12th update" />
-    <option name="LAST_COMMIT_MESSAGE" value="12th update" />
+    <MESSAGE value="13th update: Changed endpoints (remove /add from @PostMapping)" />
+    <option name="LAST_COMMIT_MESSAGE" value="13th update: Changed endpoints (remove /add from @PostMapping)" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

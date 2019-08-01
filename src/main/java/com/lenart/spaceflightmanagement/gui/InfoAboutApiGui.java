@@ -20,21 +20,21 @@ public class InfoAboutApiGui extends VerticalLayout {
     }
 
     private String setFlightControllerDescription() {
-        return "Flight:\n" +
-                "/flights\n" +
-                "/flights/add\n" +
-                "/flights/del/{flight_id}\n" +
-                "/flights/{flight_id}/addtourists/{tourist_id}\n" +
-                "/flights/{flight_id}/deltourists/{tourist_id}\n";
+        return "Flight:\n" + "";
+//                "/api/flights\n" +
+//                "/api/flights\n" +
+//                "/flights/del/{flight_id}\n" +
+//                "/flights/{flight_id}/addtourists/{tourist_id}\n" +
+//                "/flights/{flight_id}/deltourists/{tourist_id}\n";
     }
 
     private String setTouristControllerDescription() {
-        return "Tourist:\n" +
-                "/tourists\n" +
-                "/tourists/add\n" +
-                "/tourists/del/{tourist_id}\n" +
-                "/tourists/{tourist_id}/addflight/{flight_id}\n" +
-                "/tourists/{tourist_id}/delflight/{flight_id}\n";
+        return "Tourist:\n" + "";
+//                "/tourists\n" +
+//                "/tourists/add\n" +
+//                "/tourists/del/{tourist_id}\n" +
+//                "/tourists/{tourist_id}/addflight/{flight_id}\n" +
+//                "/tourists/{tourist_id}/delflight/{flight_id}\n";
     }
 
 }
