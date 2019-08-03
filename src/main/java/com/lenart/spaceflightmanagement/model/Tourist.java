@@ -143,7 +143,7 @@ public class Tourist {
 //                .forEach(Flight::returnSeatAfterRemovingTourist);
 //    }
 
-    public void removeFlightToList(Integer id) {
+    public void removeFlightFromList(Integer id) {
         Optional<Flight> searchedFlight = getOptionalFlight();
         searchedFlight
                 .filter(this::isEnoughSeats)

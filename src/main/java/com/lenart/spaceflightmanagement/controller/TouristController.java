@@ -66,7 +66,7 @@ public class TouristController {
     @PutMapping(value = "{tourist_id}/delflight/{flight_id}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void updateTouristDelFlight(@PathVariable("tourist_id") int tourist_id, @PathVariable("flight_id") int flight_id) {
         Tourist tourist = touristService.findTouristById((long) tourist_id);
-        tourist.removeFlightToList(flight_id);
+        tourist.removeFlightFromList(flight_id);
         touristService.save(tourist);
     }
 }

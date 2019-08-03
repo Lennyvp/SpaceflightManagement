@@ -67,7 +67,7 @@ public class TouristServiceImpl implements TouristService {
     }
 
     private void deleteAllFlights(Tourist tourist){
-        tourist.setFlightSet(null);
+        tourist.getFlightSet().forEach(flight -> flight.removeTouristFromList(tourist.getId().intValue()));
     }
 
 }
