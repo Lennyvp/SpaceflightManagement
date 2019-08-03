@@ -28,6 +28,7 @@ public class Tourist {
     private GenderTouristType gender;
     @NotNull
     private CountryTouristType country;
+
     private String notes;
     @NotNull
     private LocalDate dateOfBirth;

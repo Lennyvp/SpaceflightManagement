@@ -59,7 +59,9 @@ public class Flight {
     }
 
     public void setDepartureDate(LocalDateTime departureDate) {
-        this.departureDate = departureDate;
+        if(departureDate.isAfter(LocalDateTime.now())){
+            this.departureDate = departureDate;
+        }
     }
 
     public LocalDateTime getArrivalDate() {
@@ -67,7 +69,9 @@ public class Flight {
     }
 
     public void setArrivalDate(LocalDateTime arrivalDate) {
-        this.arrivalDate = arrivalDate;
+        if(arrivalDate.isAfter(LocalDateTime.now())){
+            this.arrivalDate = arrivalDate;
+        }
     }
 
     /*
@@ -126,12 +130,12 @@ public class Flight {
             boolean condition = false;
             for (Tourist t : touristSet) {
 //                touristSet.stream().filter(t->!t.equals(tourist)).forEach( t->reserveSeatAfterAddingTourist());
-                if(tourist.equals(t)){
+                if (tourist.equals(t)) {
                     condition = true;
                     break;
                 }
             }
-            if(!condition){
+            if (!condition) {
                 touristSet.add(tourist);
                 reserveSeatAfterAddingTourist();
             }
@@ -192,6 +196,7 @@ public class Flight {
 
     /*
     FOR GUI
+    It's unnecessary for API
      */
     @JsonIgnore
     public LocalDate getArrivalDateWithoutTime() {
@@ -233,13 +238,17 @@ public class Flight {
         this.departureDate = LocalDateTime.of(getDepartureDateWithoutTime(), departureTime);
     }
 
+    /*
+    END GUI TIME AND DATA
+     */
+
     @Override
     public String toString() {
         return "Flight{" +
                 "id=" + id +
                 ", departureDate=" + departureDate +
                 ", arrivalDate=" + arrivalDate +
-                ", countOfSeats=" + countOfFreeSeats +
+                ", countOfFreeSeats=" + countOfFreeSeats +
                 ", costOfTicket=" + costOfTicket +
                 ", touristList=" + touristSet +
                 '}';

@@ -7,16 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ea5fdb4-c690-44bd-bfcf-f687b9580387" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/exceptions/ConflictException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/exceptions/GlobalExceptionsHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/exceptions/NotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/FlightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/TouristController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/TouristController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/model/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/model/Flight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/model/Tourist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/model/Tourist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/FlightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/FlightController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/TouristController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/TouristController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/model/Flight.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/model/Flight.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/model/Tourist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/model/Tourist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/FlightService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/FlightService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/TouristService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/TouristService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/impl/FlightServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/impl/FlightServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/impl/TouristServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/impl/TouristServiceImpl.class" afterDir="false" />
     </list>
     <list id="ae49b108-0b43-4bcc-8bda-dec27a32add0" name="Revert &quot;Second test.&quot;" comment="Revert &quot;Second test.&quot;&#10;&#10;This reverts commit d2c074c3" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -230,7 +232,7 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4cc21a68" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4245f700" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -262,7 +264,9 @@
       <workItem from="1564526144406" duration="2711000" />
       <workItem from="1564558481010" duration="2370000" />
       <workItem from="1564603332351" duration="7915000" />
-      <workItem from="1564643066884" duration="18740000" />
+      <workItem from="1564643066884" duration="21379000" />
+      <workItem from="1564740648345" duration="2724000" />
+      <workItem from="1564810964270" duration="2888000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit.">
       <created>1564395460305</created>
@@ -411,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564656181030</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="16th update: New returned JSONs">
+      <created>1564684925732</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1564684925732</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,7 +474,8 @@
     <MESSAGE value="13th update: Changed endpoints (remove /add from @PostMapping)" />
     <MESSAGE value="14th update: Changed endpoints (add @PutMapping for Tourist&amp;Flight)" />
     <MESSAGE value="15th update: Repaired @PutMapping Error" />
-    <option name="LAST_COMMIT_MESSAGE" value="15th update: Repaired @PutMapping Error" />
+    <MESSAGE value="16th update: New returned JSONs" />
+    <option name="LAST_COMMIT_MESSAGE" value="16th update: New returned JSONs" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

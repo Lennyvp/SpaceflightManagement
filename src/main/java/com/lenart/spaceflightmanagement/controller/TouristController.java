@@ -1,5 +1,6 @@
 package com.lenart.spaceflightmanagement.controller;
 
+import com.lenart.spaceflightmanagement.exceptions.NotFoundException;
 import com.lenart.spaceflightmanagement.model.Flight;
 import com.lenart.spaceflightmanagement.model.Tourist;
 import com.lenart.spaceflightmanagement.service.FlightService;
@@ -33,6 +34,13 @@ public class TouristController {
     public void addTourist(@RequestBody Tourist tourist) {
 //        tourist.getFlightSet().clear(); //cannot add list of flight in JSON
         touristService.save(tourist);
+    }
+
+    @GetMapping(value = "/api/tourists/{tourist_id}")
+    public Tourist getTouristById(@PathVariable("tourist_id") int tourist_id){
+        Tourist tourist = touristService.findTouristById((long) tourist_id);
+        if(tourist == null) throw new NotFoundException();
+        return tourist;
     }
 
     @PutMapping(value = "/api/tourists/{tourist_id}", consumes = MediaType.APPLICATION_JSON_VALUE)
