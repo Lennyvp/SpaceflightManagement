@@ -56,11 +56,14 @@ public class FlightServiceImpl implements FlightService {
 
     @Override
     public void delete(Flight flight) {
+        deleteAllTourists(flight);
         flightDao.delete(flight);
     }
 
     @Override
     public void deleteById(Long id) {
+        Flight flight  = flightDao.findFlightById(id);
+        deleteAllTourists(flight);
         flightDao.deleteById(id);
     }
 
@@ -75,5 +78,9 @@ public class FlightServiceImpl implements FlightService {
         flight.setCostOfTicket( updatedFlight.getCostOfTicket());
 
         flightDao.save(flight);
+    }
+
+    private void deleteAllTourists(Flight flight){
+        flight.setTouristSet(null);
     }
 }

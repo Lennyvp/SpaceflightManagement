@@ -40,11 +40,14 @@ public class TouristServiceImpl implements TouristService {
 
     @Override
     public void delete(Tourist tourist) {
+        deleteAllFlights(tourist);
         touristDao.delete(tourist);
     }
 
     @Override
     public void deleteById(Long id) {
+        Tourist tourist = findTouristById(id);
+        deleteAllFlights(tourist);
         touristDao.deleteById(id);
     }
 
@@ -56,11 +59,15 @@ public class TouristServiceImpl implements TouristService {
         tourist.setFirstName(updatedTourist.getFirstName());
         tourist.setLastName(updatedTourist.getLastName());
         tourist.setGender(updatedTourist.getGender());
+        tourist.setCountry(updatedTourist.getCountry());
         tourist.setNotes(updatedTourist.getNotes());
         tourist.setDateOfBirth(updatedTourist.getDateOfBirth());
 
         touristDao.save(tourist);
     }
 
+    private void deleteAllFlights(Tourist tourist){
+        tourist.setFlightSet(null);
+    }
 
 }
