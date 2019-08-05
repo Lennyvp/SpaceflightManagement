@@ -1,7 +1,7 @@
 package com.lenart.spaceflightmanagement.model.typeTourist;
 
 public enum CountryTouristType {
-    POLAND, GERMAN,
+    POLAND, GERMANY,
     RUSSIA, ENGLAND,
     USA, FRANCE,
     ITALY, NORWAY,

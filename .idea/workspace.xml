@@ -6,15 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ea5fdb4-c690-44bd-bfcf-f687b9580387" name="Default Changelist" comment="">
+    <list default="true" id="3ea5fdb4-c690-44bd-bfcf-f687b9580387" name="Default Changelist" comment="20th update: Info About API (Vaadin-GUI)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/gui/InfoAboutApiGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/gui/InfoAboutApiGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/model/Connector.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/model/TouristIdMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/impl/TouristServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/impl/TouristServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/gui/InfoAboutApiGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/gui/InfoAboutApiGui.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/impl/TouristServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/impl/TouristServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/frontend/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/frontend/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/DataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/model/typeTourist/CountryTouristType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/model/typeTourist/CountryTouristType.java" afterDir="false" />
     </list>
     <list id="ae49b108-0b43-4bcc-8bda-dec27a32add0" name="Revert &quot;Second test.&quot;" comment="Revert &quot;Second test.&quot;&#10;&#10;This reverts commit d2c074c3" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -225,12 +220,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@69e01a1f" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -264,7 +254,10 @@
       <workItem from="1564740648345" duration="2724000" />
       <workItem from="1564810964270" duration="3210000" />
       <workItem from="1564816975207" duration="3415000" />
-      <workItem from="1564847705774" duration="7377000" />
+      <workItem from="1564847705774" duration="7493000" />
+      <workItem from="1564902265792" duration="2997000" />
+      <workItem from="1564940306484" duration="900000" />
+      <workItem from="1565015952096" duration="3941000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit.">
       <created>1564395460305</created>
@@ -441,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564850485299</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="20th update: Info About API (Vaadin-GUI)">
+      <created>1564867118555</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1564867118555</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,7 +496,8 @@
     <MESSAGE value="16th update: New returned JSONs" />
     <MESSAGE value="17th update: Get method find by id, checking Flight's time" />
     <MESSAGE value="19th update: Option to delete Tourist&amp;Flight with not empty list of elements" />
-    <option name="LAST_COMMIT_MESSAGE" value="19th update: Option to delete Tourist&amp;Flight with not empty list of elements" />
+    <MESSAGE value="20th update: Info About API (Vaadin-GUI)" />
+    <option name="LAST_COMMIT_MESSAGE" value="20th update: Info About API (Vaadin-GUI)" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

@@ -33,9 +33,9 @@ public class DataLoader implements ApplicationRunner {
 
         Tourist tourist1 = new Tourist("Jan","Nowak", GenderTouristType.MAN, CountryTouristType.AUSTRALIA,"smoking",
                 LocalDate.of(1994,10,10));
-        Tourist tourist2 = new Tourist("Pjoter","Nowak", GenderTouristType.MAN,CountryTouristType.POLAND,"smoking",
+        Tourist tourist2 = new Tourist("Piotr","Kowalski", GenderTouristType.MAN,CountryTouristType.POLAND,"smoking",
                 LocalDate.of(1994,10,10));
-        Tourist tourist3 = new Tourist("Michal","Nowak", GenderTouristType.MAN,CountryTouristType.ENGLAND,"smoking",
+        Tourist tourist3 = new Tourist("Michal","Wisniewski", GenderTouristType.MAN,CountryTouristType.ENGLAND,"smoking",
                 LocalDate.of(1994,10,10));
 
 
