@@ -86,25 +86,11 @@ public class FlightServiceImpl implements FlightService {
 
     @Override
     public void addTouristToFlight(Long flightId, Long touristId) {
-//        Flight flight = flightDao.findFlightById(flightId);
-//        Tourist tourist = touristService.findTouristById(touristId);
-//        flight.addTouristToList(tourist);
-//        tourist.addFlightToList(flight);
-//        touristService.save(tourist);
-//        flightDao.save(flight);
-
         touristService.addFlightToTourist(touristId, flightId);
     }
 
     @Override
     public void removeTouristFromFlight(Long flightId, Long touristId) {
-//        Flight flight = flightDao.findFlightById(flightId);
-//        Tourist tourist = touristService.findTouristById(touristId);
-//        flight.removeTouristFromList(touristId.intValue());
-//        tourist.removeFlightFromList(flightId.intValue());
-//        flightDao.save(flight);
-//        touristService.save(tourist);
-
         touristService.removeFlightFromTourist(touristId, flightId);
     }
 

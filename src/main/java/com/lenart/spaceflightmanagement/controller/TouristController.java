@@ -57,7 +57,7 @@ public class TouristController {
         touristService.addFlightToTourist((long) tourist_id, (long) flight_id);
     }
 
-    @PutMapping(value = "/api/{tourist_id}/delflight/{flight_id}")
+    @PutMapping(value = "/api/tourists/{tourist_id}/delflight/{flight_id}")
     public void updateTouristDelFlight(@PathVariable("tourist_id") int tourist_id, @PathVariable("flight_id") int flight_id) {
         touristService.removeFlightFromTourist((long) tourist_id, (long) flight_id);
     }

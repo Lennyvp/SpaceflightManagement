@@ -85,8 +85,7 @@ public class TouristServiceImpl implements TouristService {
     public void removeFlightFromTourist(Long touristId, Long flightId) {
         Flight flight = flightDao.findFlightById(flightId);
         Tourist tourist = touristDao.findTouristById(touristId);
-        tourist.removeFlightFromList(flightId.intValue());
-        flight.removeTouristFromList(touristId.intValue());
+        deleteBothIds(tourist, flight);
         touristDao.save(tourist);
         flightDao.save(flight);
     }
@@ -94,6 +93,11 @@ public class TouristServiceImpl implements TouristService {
     private void deleteAllFlights(Tourist tourist){
         int touristId = tourist.getId().intValue();
         tourist.getFlightSet().forEach(flight -> flight.removeTouristFromList(touristId));
+    }
+
+    private void deleteBothIds(Tourist tourist, Flight flight){
+        tourist.getFlightSet().remove(flight);
+        flight.getTouristSet().remove(tourist);
     }
 
 }

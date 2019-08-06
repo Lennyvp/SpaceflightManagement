@@ -8,24 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="3ea5fdb4-c690-44bd-bfcf-f687b9580387" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/FlightController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/TouristController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/controller/TouristController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/FlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/TouristService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/TouristService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/impl/FlightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/impl/FlightServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/impl/TouristServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lenart/spaceflightmanagement/service/impl/TouristServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/DataLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/DataLoader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/FlightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/FlightController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/TouristController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/controller/TouristController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/gui/InfoAboutApiGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/gui/InfoAboutApiGui.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/model/Connector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/model/TouristIdMap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/model/typeTourist/CountryTouristType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/model/typeTourist/CountryTouristType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/FlightService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/FlightService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/TouristService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/TouristService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/impl/FlightServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/impl/FlightServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/impl/TouristServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lenart/spaceflightmanagement/service/impl/TouristServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/frontend/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/frontend/style.css" afterDir="false" />
     </list>
     <list id="ae49b108-0b43-4bcc-8bda-dec27a32add0" name="Revert &quot;Second test.&quot;" comment="Revert &quot;Second test.&quot;&#10;&#10;This reverts commit d2c074c3" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -278,7 +265,7 @@
       <workItem from="1564847705774" duration="7493000" />
       <workItem from="1564902265792" duration="2997000" />
       <workItem from="1564940306484" duration="900000" />
-      <workItem from="1565015952096" duration="8425000" />
+      <workItem from="1565015952096" duration="9191000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit.">
       <created>1564395460305</created>
@@ -469,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565040685670</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="22th update: Adding and Removing Tourist/Flight Lists">
+      <created>1565087939211</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1565087939212</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +520,8 @@
     <MESSAGE value="19th update: Option to delete Tourist&amp;Flight with not empty list of elements" />
     <MESSAGE value="20th update: Info About API (Vaadin-GUI)" />
     <MESSAGE value="21th update: Update Data Loader" />
-    <option name="LAST_COMMIT_MESSAGE" value="21th update: Update Data Loader" />
+    <MESSAGE value="22th update: Adding and Removing Tourist/Flight Lists" />
+    <option name="LAST_COMMIT_MESSAGE" value="22th update: Adding and Removing Tourist/Flight Lists" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
