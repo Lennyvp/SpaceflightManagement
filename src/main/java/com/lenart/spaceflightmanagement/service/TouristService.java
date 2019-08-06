@@ -20,4 +20,8 @@ public interface TouristService {
     void deleteById(Long id);
 
     void updateTouristById(Long id, Tourist updatedTourist);
+
+    void addFlightToTourist(Long touristId, Long flightId);
+
+    void removeFlightFromTourist(Long touristId, Long flightId);
 }

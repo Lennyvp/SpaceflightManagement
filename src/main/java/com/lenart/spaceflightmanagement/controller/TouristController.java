@@ -16,12 +16,10 @@ import java.util.List;
 public class TouristController {
 
     private TouristService touristService;
-    private FlightService flightService;
 
     @Autowired
-    public TouristController(TouristService touristService, FlightService flightService) {
+    public TouristController(TouristService touristService) {
         this.touristService = touristService;
-        this.flightService = flightService;
     }
 
     @GetMapping(value = "/api/tourists")
@@ -54,19 +52,13 @@ public class TouristController {
 //        touristService.delete(tourist);
     }
 
-    @PutMapping(value = "/api/tourists/{tourist_id}/addflight/{flight_id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/api/tourists/{tourist_id}/addflight/{flight_id}")
     public void updateTouristAddFlight(@PathVariable("tourist_id") int tourist_id, @PathVariable("flight_id") int flight_id) {
-        Flight flight = flightService.findFlightById((long) flight_id);
-        Tourist tourist = touristService.findTouristById((long) tourist_id);
-        tourist.addFlightToList(flight);
-        touristService.save(tourist);
-        flightService.save(flight);
+        touristService.addFlightToTourist((long) tourist_id, (long) flight_id);
     }
 
-    @PutMapping(value = "{tourist_id}/delflight/{flight_id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/api/{tourist_id}/delflight/{flight_id}")
     public void updateTouristDelFlight(@PathVariable("tourist_id") int tourist_id, @PathVariable("flight_id") int flight_id) {
-        Tourist tourist = touristService.findTouristById((long) tourist_id);
-        tourist.removeFlightFromList(flight_id);
-        touristService.save(tourist);
+        touristService.removeFlightFromTourist((long) tourist_id, (long) flight_id);
     }
 }

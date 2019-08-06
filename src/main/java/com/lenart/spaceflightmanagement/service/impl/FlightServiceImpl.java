@@ -2,7 +2,9 @@ package com.lenart.spaceflightmanagement.service.impl;
 
 import com.lenart.spaceflightmanagement.dao.FlightDao;
 import com.lenart.spaceflightmanagement.model.Flight;
+import com.lenart.spaceflightmanagement.model.Tourist;
 import com.lenart.spaceflightmanagement.service.FlightService;
+import com.lenart.spaceflightmanagement.service.TouristService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,10 +15,12 @@ import java.util.List;
 public class FlightServiceImpl implements FlightService {
 
     private FlightDao flightDao;
+    private TouristService touristService;
 
     @Autowired
-    public FlightServiceImpl(FlightDao flightDao) {
+    public FlightServiceImpl(FlightDao flightDao, TouristService touristService) {
         this.flightDao = flightDao;
+        this.touristService = touristService;
     }
 
     @Override
@@ -78,6 +82,30 @@ public class FlightServiceImpl implements FlightService {
         flight.setCostOfTicket( updatedFlight.getCostOfTicket());
 
         flightDao.save(flight);
+    }
+
+    @Override
+    public void addTouristToFlight(Long flightId, Long touristId) {
+//        Flight flight = flightDao.findFlightById(flightId);
+//        Tourist tourist = touristService.findTouristById(touristId);
+//        flight.addTouristToList(tourist);
+//        tourist.addFlightToList(flight);
+//        touristService.save(tourist);
+//        flightDao.save(flight);
+
+        touristService.addFlightToTourist(touristId, flightId);
+    }
+
+    @Override
+    public void removeTouristFromFlight(Long flightId, Long touristId) {
+//        Flight flight = flightDao.findFlightById(flightId);
+//        Tourist tourist = touristService.findTouristById(touristId);
+//        flight.removeTouristFromList(touristId.intValue());
+//        tourist.removeFlightFromList(flightId.intValue());
+//        flightDao.save(flight);
+//        touristService.save(tourist);
+
+        touristService.removeFlightFromTourist(touristId, flightId);
     }
 
     private void deleteAllTourists(Flight flight){

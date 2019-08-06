@@ -1,7 +1,10 @@
 package com.lenart.spaceflightmanagement.service.impl;
 
+import com.lenart.spaceflightmanagement.dao.FlightDao;
 import com.lenart.spaceflightmanagement.dao.TouristDao;
+import com.lenart.spaceflightmanagement.model.Flight;
 import com.lenart.spaceflightmanagement.model.Tourist;
+import com.lenart.spaceflightmanagement.service.FlightService;
 import com.lenart.spaceflightmanagement.service.TouristService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,10 +15,12 @@ import java.util.List;
 public class TouristServiceImpl implements TouristService {
 
     private TouristDao touristDao;
+    private FlightDao flightDao;
 
     @Autowired
-    public TouristServiceImpl(TouristDao touristDao) {
+    public TouristServiceImpl(TouristDao touristDao, FlightDao flightDao) {
         this.touristDao = touristDao;
+        this.flightDao = flightDao;
     }
 
     @Override
@@ -64,6 +69,26 @@ public class TouristServiceImpl implements TouristService {
         tourist.setDateOfBirth(updatedTourist.getDateOfBirth());
 
         touristDao.save(tourist);
+    }
+
+    @Override
+    public void addFlightToTourist(Long touristId, Long flightId) {
+        Flight flight = flightDao.findFlightById(flightId);
+        Tourist tourist = touristDao.findTouristById(touristId);
+        tourist.addFlightToList(flight);
+        flight.addTouristToList(tourist);
+        touristDao.save(tourist);
+        flightDao.save(flight);
+    }
+
+    @Override
+    public void removeFlightFromTourist(Long touristId, Long flightId) {
+        Flight flight = flightDao.findFlightById(flightId);
+        Tourist tourist = touristDao.findTouristById(touristId);
+        tourist.removeFlightFromList(flightId.intValue());
+        flight.removeTouristFromList(touristId.intValue());
+        touristDao.save(tourist);
+        flightDao.save(flight);
     }
 
     private void deleteAllFlights(Tourist tourist){
